@@ -1,0 +1,41 @@
+<div class="login-container">
+    <img class="film" src="assets\images\ふじ鳩 on X.jpeg" alt="">
+    <div class="logo">
+        Rotten Tomatoes
+    </div>
+    <div class="desc">
+        Rotten Tomatoes is a website that aggregates reviews of movies and TV shows from critics. The site was launched
+        in 1998 by three undergraduate students at the University of California, Berkeley.
+        Rotten Tomatoes collects reviews from critics who publish at outlets worldwide. The reviews are rated either
+        Fresh or Rotten, which contributes to a film or TV show's Tomatometer score. The score is what percentage of
+        those critics rated the movie 6/10 or higher.
+
+    </div>
+
+    <div class="login-form">
+        <form [formGroup]="form" (ngSubmit)= "login()">
+            <div class="form-group">
+               
+                <input type="email" class="form-control" placeholder="Username" name="username" formControlName= "username">
+                <div class="alert alert-danger"
+                    *ngIf= "form.controls.username.touched && form.controls.username.invalid">
+                    <div *ngIf= "form.controls.username.errors?.required">Username is required</div>
+                    <div *ngIf= "form.controls.username.errors?.minlength">Username must be at least 6 characters</div>
+                </div>
+            </div>
+            <div class="form-group">
+             
+                <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                <div class="alert alert-danger"
+                    *ngIf= "form.controls.password.touched && form.controls.password.invalid">
+                    <div *ngIf= "form.controls.password.errors?.required">Password is required</div>
+                    <!-- <div *ngIf= "form.controls.password.errors?.minlength">Password must be at least 6 characters</div> -->
+                    <!-- <div *ngIf= "form.get('password')?.hasError('invalidPassword')"> Password Not Valid</div> -->
+
+
+                </div>
+            </div>
+            <button type="button" class="btn btn-dark" (click)= "login()" >Login</button>
+        </form>
+    </div>
+</div>
