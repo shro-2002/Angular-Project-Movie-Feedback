@@ -72,8 +72,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 If you have any questions or suggestions, please feel free to reach out to the project maintainer:
 
-- Your Name
-- Email: your@email.com
-- GitHub: [Your GitHub Profile](https://github.com/your-username)
+- Shroddha Ghosh
+- Email: ghoshshro2002@gmail.com
+
 
 Thank you for using the Movie Feedback App! We hope you find it helpful and educational for your Angular development journey.
